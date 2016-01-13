@@ -1,6 +1,6 @@
 #!/bin/bash
 SSH_ADMIN=ec2-user
-SSH_KEY=~/.ssh/toolstation.pem
+SSH_KEY=~/.ssh/privateAdminKey.pem
 
 while read machine
 do
