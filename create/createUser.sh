@@ -1,9 +1,9 @@
 #!/bin/bash
 ls -al /
 echo 'Creating user ' $user
-encryptedPassowrd=`echo $password | openssl passwd -1 -stdin`
-echo $encryptedPassowrd
-sudo adduser $user -p $encryptedPassowrd
+encryptedPassword=`echo $password | openssl passwd -1 -stdin`
+echo $encryptedPassword
+sudo adduser $user -p $encryptedPassword
 sudo -u $user mkdir /home/$user/.ssh
 sudo -u $user chmod 777 /home/$user/.ssh
 sudo bash -c "echo $pubk | base64 --decode > /home/$user/.ssh/authorized_keys"
