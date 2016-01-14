@@ -1,6 +1,5 @@
 #!/bin/bash
-SSH_ADMIN=admin
-SSH_KEY=~/.ssh/secretAdmin.pem
+. ../appl.properties
 
 while read machine
 do
@@ -9,7 +8,7 @@ do
       userline=($userline)
       user=${userline[0]}
       password=${userline[1]}
-      pub=${userline[2]}
+      pub='./pub_keys/'${userline[2]}
       isSudo=${userline[3]}
       echo $machine 'configuring user -> ' $user ' with password ' $password ' and public key ' $pub
       pubk=`base64 $pub`
