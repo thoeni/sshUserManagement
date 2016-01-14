@@ -1,1 +1,2 @@
-testuser32 123456 local.pub
+user1 123456 local.pub sudo
+user2 123456 local.pub

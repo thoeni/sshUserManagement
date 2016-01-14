@@ -11,4 +11,10 @@ sudo chown $user:$user /home/$user/.ssh
 sudo chmod 700 /home/$user/.ssh
 sudo chown $user:$user /home/$user/.ssh/authorized_keys
 sudo chmod 600 /home/$user/.ssh/authorized_keys
+if [ "$isSudo" = "sudo" ]
+  then
+    permissions='ALL=(ALL:ALL) NOPASSWD:ALL'
+    visudoString='echo "'$user' '$permissions'" | (EDITOR="tee -a" visudo)'
+    sudo bash -c ''"$visudoString"''
+fi
 exit
