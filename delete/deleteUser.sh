@@ -1,5 +1,4 @@
 #!/bin/bash
-ls -al /
 echo 'Deleting user ' $user
 sudo userdel -r $user
 # if [ ! -z "$1" ]; then

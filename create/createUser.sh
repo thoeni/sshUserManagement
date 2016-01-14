@@ -1,5 +1,4 @@
 #!/bin/bash
-ls -al /
 echo 'Creating user ' $user
 encryptedPassword=`echo $password | openssl passwd -1 -stdin`
 echo $encryptedPassword
