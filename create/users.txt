@@ -1,1 +1,2 @@
-testuser 123456 local.pub sudo
+testuser1 testpwd local.pub sudo
+testuser2 testpwd local.pub

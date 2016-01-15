@@ -1,1 +1,1 @@
-testuser
+ec2-user
